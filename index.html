@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>flex profile card</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         /* ----------------------------------------------------------------For Body------------------------------------------------------------------------- */
-        body{
+        
+        body {
             position: relative;
             display: flex;
             flex-direction: column;
@@ -21,36 +24,51 @@
             align-items: center;
             justify-content: center;
             font-size: 1rem;
-            background-image: linear-gradient(to right, #cc2b5e, #753a88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+            background-image: linear-gradient(to right, #cc2b5e, #753a88);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            ;
+        }
+        
+        h1 {
+            font-size: 36px;
+        }
+        
+        h2 {
+            font-size: 30px;
+            text-align: center;
         }
         /* -------------------------------------------------------------- Profile pic named as "profile-pic" ---------------------------------------------------------- */
-        .profile-pic{
+        
+        .profile-pic {
             display: flex;
             position: relative;
             height: 150px;
-            margin-top: -70px;
+            margin-top: -80px;
             width: 150px;
             border-radius: 50%;
             border: 5px solid rgb(142, 89, 192);
             box-shadow: 0px 0px 50px 3px rgb(142, 89, 192);
         }
         /* ------------------------------------------------------For Name inside body--------------------------------------------------------------------- */
-        h1{
+        
+        h1 {
             color: #236ea0;
         }
         /* -----------------------------------------------div inside the body and named as "parent"------------------------------------------------------ */
-        .parent{
+        
+        .parent {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-evenly;
-            height: 80vh;
+            justify-content: space-around;
+            height: 78vh;
             width: 50vw;
             background-color: floralwhite;
             border-radius: 2%;
         }
         /* -----------------------------------------------parent inside all div's group name as "class"--------------------------------------------------- */
-        .class{
+        
+        .class {
             display: flex;
             flex-direction: row;
             height: 15vh;
@@ -61,21 +79,25 @@
             margin: 5px;
         }
         /* ----------------------------------------------------"class1" is for giving names and bio --------------------------------------------------------*/
-        .class1{
+        
+        .class1 {
             display: flex;
-            width: 50vw;
+            width: 80%;
             flex-direction: column;
             justify-content: center;
         }
         /* -----------------------------------------------"class2" for following and the numbers-------------------------------------------------- */
-        .class2{
+        
+        .class2 {
             display: flex;
             flex-wrap: wrap;
             height: 20vh;
+            width: 80%;
             justify-content: space-evenly;
         }
         /* ------------------------------------------For numbers inside class2 named as "number"----------------------------------------------------- */
-        .number{
+        
+        .number {
             display: flex;
             font-weight: bold;
             font-size: 1.5rem;
@@ -83,7 +105,8 @@
             justify-content: space-around;
         }
         /* --------------------------------------------for text inside class2 named the class_name as "fans"---------------------------------------- */
-        .fans{
+        
+        .fans {
             display: flex;
             flex-flow: row wrap;
             font-size: 1.5rem;
@@ -91,14 +114,17 @@
             justify-content: space-around;
         }
         /* icons group class name as class3 */
-        .class3{
+        
+        .class3 {
             display: flex;
+            width: 80%;
             flex-flow: row wrap;
             align-items: center;
             justify-content: space-evenly;
         }
         /* ----------------------------------------------------------------icon tag common features----------------------------------------------------- */
-        i{
+        
+        i {
             height: 2.5rem;
             font-size: 1.5em;
             width: 2.5rem;
@@ -106,107 +132,206 @@
             border-radius: 50%;
         }
         /* -------------------------------------------------------------------------location icon------------------------------------------------------------ */
-        #a1{
+        
+        #a1 {
             font-size: 1.5rem;
         }
         /* -------------------------------------------------------------------------Facebook icon------------------------------------------------------------ */
-        #a2{
-            background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(59,89,152,1) 0%); 
+        
+        #a2 {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(59, 89, 152, 1) 0%);
             box-shadow: 0px 0px 50px 0.5px blue;
             color: white;
         }
         /* -------------------------------------------------------------------------Twitter icon------------------------------------------------------------ */
-        #a3{
-            background: linear-gradient(to right, #5B86E5, #36D1DC); 
+        
+        #a3 {
+            background: linear-gradient(to right, #5B86E5, #36D1DC);
             box-shadow: 0px 0px 50px 10px skyblue;
             color: white;
         }
         /* -------------------------------------------------------------------------Instagram icon------------------------------------------------------------ */
-        #a4{
-            background: linear-gradient(to right, #c0392b, #8e44ad); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+        #a4 {
+            background: linear-gradient(to right, #c0392b, #8e44ad);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             box-shadow: 0px 0px 50px 3px #a14399;
             color: white;
             font-size: 1.6rem;
         }
         /* ------------------------------------------------------------------------------Be icon------------------------------------------------------------ */
-        #a5{
-            background: linear-gradient(to right, #56ccf2, #2f80ed); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+        #a5 {
+            background: linear-gradient(to right, #56ccf2, #2f80ed);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             box-shadow: 0px 0px 50px 10px skyblue;
         }
         /* -------------------------------------------------------------------------Github icon------------------------------------------------------------ */
-        #a6{
-            background: linear-gradient(to right, #000000, #434343); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+        #a6 {
+            background: linear-gradient(to right, #000000, #434343);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             box-shadow: 0px 0px 50px 2px black;
             color: white;
         }
         /* -------------------------------------------------------------------------Codepen icon------------------------------------------------------------ */
-        #a7{
-            background: linear-gradient(to right, #2980b9, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+        #a7 {
+            background: linear-gradient(to right, #2980b9, #2c3e50);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             box-shadow: 0px 0px 50px 5px #2980b9;
             color: white;
         }
         /* -------------------------------------------------------------------------Hipolink icon------------------------------------------------------------ */
-        #a8{
-            background: linear-gradient(90deg, rgba(204,29,29,1) 16%, rgba(242,85,12,1) 73%);
-            box-shadow: 0px 0px 50px 1px rgba(242,85,12,1);
+        
+        #a8 {
+            background: linear-gradient(90deg, rgba(204, 29, 29, 1) 16%, rgba(242, 85, 12, 1) 73%);
+            box-shadow: 0px 0px 50px 1px rgba(242, 85, 12, 1);
         }
         /* ----------------------------------------------------------Message and Follow class named as "class4"--------------------------------------------------- */
-        .class4{
+        
+        .class4 {
             height: 8vh;
+            width: 80%;
+            font-size: auto;
             display: flex;
             flex-direction: row;
             justify-content: space-around;
         }
         /* -----------------------------------------------------------------Message button named as button1------------------------------------------------------------ */
-        .button1{
+        
+        .button1 {
             height: 50px;
             width: 200px;
-            background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: linear-gradient(to right, #5B86E5, #36D1DC);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             font-size: 1.5rem;
             color: white;
             border-style: none;
             border-radius: 25px;
         }
         /* -------------------------------------------------------------------------location icon------------------------------------------------------------ */
-        .button2{
+        
+        .button2 {
             height: 50px;
             width: 200px;
-            background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: linear-gradient(to right, #FF4B2B, #FF416C);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             font-size: 1.5rem;
             color: white;
             border-style: none;
             border-radius: 25px;
         }
-        @media screen and (max-width:768px) {
-            .class2{
-            font-size: 10px;
+        
+        .c1 {
+            font-size: 24px;
+        }
+        
+        @media screen and (max-width:768px) and (min-width:340px) {
+            .parent {
+                width: 80vw;
             }
-            .profile-pic{
+            .c1 {
+                font-size: 14px;
+            }
+            .class2 {
+                font-size: 10px;
+            }
+            .profile-pic {
                 height: 100px;
                 width: 100px;
             }
-            .number{
+            .number {
                 font-size: 1.5rem;
             }
             /* --------------------------------------------for text inside class2 named the class_name as "fans"---------------------------------------- */
-            .fans{
+            .fans {
                 display: flex;
                 flex-flow: row wrap;
                 font-size: 1.2rem;
                 text-align: center;
                 justify-content: space-around;
             }
+            .button1,
+            .button2 {
+                font-size: 16px;
+            }
+        }
+        
+        @media screen and (max-width:340px) and (min-width:240px) {
+            .profile-pic {
+                height: 100px;
+                width: 100px;
+                margin-top: -50px;
+            }
+            .parent {
+                width: 90vw;
+                height: 80vh;
+            }
+            .c1 {
+                font-size: 13px;
+            }
+            .class {
+                width: 90%;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            .class4 {
+                font-size: 10px;
+            }
+            .button1,
+            .button2 {
+                font-size: 20px;
+            }
+        }
+        
+        @media screen and (max-width:240px) and (min-width:140px) {
+            .profile-pic {
+                height: 75px;
+                width: 75px;
+                margin-top: -50px;
+            }
+            .parent {
+                width: 90vw;
+                height: 87vh;
+            }
+            .c1 {
+                font-size: 13px;
+                text-align: center;
+            }
+            .class {
+                width: 90%;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            h2 {
+                font-size: 20px;
+                text-align: center;
+            }
+            .button1,
+            .button2 {
+                font-size: 16px;
+            }
+            .fans {
+                font-size: 1rem;
+            }
+            .number {
+                font-size: 1.3rem;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="parent">
         <div class="image-container">
-            <img class="profile-pic" src="./images/Bellam sai 01.jpg" alt="" >
+            <img class="profile-pic" src="./images/Bellam sai 01.jpg" alt="">
         </div>
         <div class="class class1">
             <h1>Bellam Sai</h1>
-            <p>Front-end Developer from <b>Hyderabad</b></p>
+            <p class="c1">Front-end Developer from <b>Hyderabad</b></p>
             <h2><i id="a1" class="bi bi-geo-alt"></i>Telangana, India</h2>
         </div>
         <div class="class class2">
@@ -228,7 +353,7 @@
             </div>
         </div>
         <div class="class class3">
-            <i  id="a2" class="bi bi-facebook"></i>
+            <i id="a2" class="bi bi-facebook"></i>
             <i id="a3" class="bi bi-twitter"></i>
             <i id="a4" class="bi bi-instagram"></i>
             <i id="a5" class="bi bi-behance"></i>
@@ -242,4 +367,5 @@
         </div>
     </div>
 </body>
+
 </html>
